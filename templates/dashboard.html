@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h2>Benvenuto, {{ session['user'] }}!</h2>
+    <a href="/post_content">Posta nuovo contenuto</a><br><br>
+
+    <h3>Contenuti Postati:</h3>
+    <ul>
+        {% for content in contents %}
+            <li><strong>{{ content[1] }}</strong> (Tipo: {{ content[2] }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
